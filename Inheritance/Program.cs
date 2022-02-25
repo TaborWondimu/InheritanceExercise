@@ -28,12 +28,31 @@ namespace Inheritance
              *  
              * Creatively display the class member values 
              */
+            Bird bird = new Bird();
+
+            bird.BreedType = "Dove";
+            bird.IsMammal = true;
+            bird.CanFly = true;
+            bird.Gender = "female";
+            bird.Habitat = "tree";
+
+            Console.WriteLine($"Quick Facts About My Bird \n Breed is {bird.BreedType} \n Bird Mammal? {bird.IsMammal}\n Can it fly? {bird.CanFly}\n My Bird resides on {bird.Habitat}\n My bird is {bird.Gender}");
+            
 
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Reptile class
              *  
              * Creatively display the class member values 
              */
+            Reptile reptile = new Reptile();
+            reptile.Name = "Snake";
+            reptile.IsPet = true;
+            reptile.LivesOnLand = true;
+            reptile.Crawls = true;
+            Console.WriteLine($"==========================================================");
+
+            Console.WriteLine($"Missing Reptile\nName is {reptile.Name}\nIf you ask is it a pet? the answer is {reptile.IsPet}\nIf you are still curious and ask does it live on land?\nYes that is {reptile.LivesOnLand}\nYou don't believe me so you ask me does it crawl?\n the answer is {reptile.Crawls} ");
+
         }
     }
 }
