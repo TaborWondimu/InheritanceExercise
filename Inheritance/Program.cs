@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Inheritance
 {
@@ -36,23 +37,31 @@ namespace Inheritance
             bird.Gender = "female";
             bird.Habitat = "tree";
 
-            Console.WriteLine($"Quick Facts About My Bird \n Breed is {bird.BreedType} \n Bird Mammal? {bird.IsMammal}\n Can it fly? {bird.CanFly}\n My Bird resides on {bird.Habitat}\n My bird is {bird.Gender}");
-            
-
             /*Create an object of your Reptile class
-             *  give values to your members using the object of your Reptile class
-             *  
-             * Creatively display the class member values 
-             */
-            Reptile reptile = new Reptile();
-            reptile.Name = "Snake";
-            reptile.IsPet = true;
-            reptile.LivesOnLand = true;
-            reptile.Crawls = true;
-            Console.WriteLine($"==========================================================");
+              *  give values to your members using the object of your Reptile class
+              *  
+              * Creatively display the class member values 
+              */
+            Reptile reptile = new Reptile()
+            {
+                Name = "Snake",
+                IsPet = true,
+                LivesOnLand = true,
+                Crawls = true,
+            };
 
-            Console.WriteLine($"Missing Reptile\nName is {reptile.Name}\nIf you ask is it a pet? the answer is {reptile.IsPet}\nIf you are still curious and ask does it live on land?\nYes that is {reptile.LivesOnLand}\nYou don't believe me so you ask me does it crawl?\n the answer is {reptile.Crawls} ");
+            var animalList = new Animal[] {bird};    
+            foreach(var animal in animalList)
+            {
+                Console.WriteLine($"Can Fly? {bird.CanFly}");
+                Console.WriteLine($"Lives on {bird.Habitat}");
+                Console.WriteLine($"Gender Is {bird.Gender}"); 
+                Console.WriteLine($"Mammal? {bird.IsMammal} ");
+                Console.WriteLine($"Breed Type {bird.BreedType}");
+            }
+           
 
         }
     }
 }
+
